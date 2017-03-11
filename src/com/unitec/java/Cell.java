@@ -2,6 +2,11 @@ package com.unitec.java;
 
 import javax.swing.JLabel;
 
+/**
+ * @author Kedar
+ * The cell maintaining the state of current and new generation
+ * and reference to JLabel for rendering the state on screen 
+ */
 public class Cell {
 	private boolean isAlive = false;
 	private boolean wasAlive = false;
