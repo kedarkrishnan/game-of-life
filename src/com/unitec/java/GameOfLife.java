@@ -21,7 +21,7 @@ public class GameOfLife extends JFrame{
 	private static final int COLS = 50;	
 	private static final int STEP_TIME = 500;
 	
-	GameOfLife(int rows,int cols){
+	public GameOfLife(int rows,int cols){
 		setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
 		setSize(WIDTH, HEIGHT);
 		setTitle("Game of life");

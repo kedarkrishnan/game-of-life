@@ -1,11 +1,13 @@
 package com.unitec.java;
 
 import java.awt.Color;
+import java.util.Random;
 
 /**
  * @author Kedar
  * Handle the state of the cells in the universe as per the game rules
  */
+
 public class CellHandler {
 	
 	private Cell[][] universe;
@@ -13,7 +15,7 @@ public class CellHandler {
 	private int cols;
 	private int initalLives;
 	
-	CellHandler(Cell[][] universe,int rows, int cols){
+	public CellHandler(Cell[][] universe,int rows, int cols){
 		this.universe = universe;
 		this.rows = rows;
 		this.cols = cols;
@@ -49,24 +51,24 @@ public class CellHandler {
 //		makeCellAlive(universe[1][cols-1],true);
 //		makeCellAlive(universe[2][cols-1],true);
 		
-		makeCellAlive(universe[3][16],true);
-		makeCellAlive(universe[4][16],true);
-		makeCellAlive(universe[5][16],true);	
+//		makeCellAlive(universe[3][16],true);
+//		makeCellAlive(universe[4][16],true);
+//		makeCellAlive(universe[5][16],true);	
+//		
+//		makeCellAlive(universe[10][10],true);
+//		makeCellAlive(universe[10][11],true);
+//		makeCellAlive(universe[11][10],true);
+//		
+//		makeCellAlive(universe[12][13],true);
+//		makeCellAlive(universe[13][13],true);
+//		makeCellAlive(universe[13][12],true);
 		
-		makeCellAlive(universe[10][10],true);
-		makeCellAlive(universe[10][11],true);
-		makeCellAlive(universe[11][10],true);
-		
-		makeCellAlive(universe[12][13],true);
-		makeCellAlive(universe[13][13],true);
-		makeCellAlive(universe[13][12],true);
-		
-//		Random random = new Random();
-//		int count = 0;
-//		while (count<initalLives) {
-//			makeCellAlive(universe[random.nextInt(rows)][random.nextInt(cols)],true);
-//			count++;
-//		}
+		Random random = new Random();
+		int count = 0;
+		while (count<initalLives) {
+			makeCellAlive(universe[random.nextInt(rows)][random.nextInt(cols)],true);
+			count++;
+		}
 //
 //		makeCellAlive(universe[3][3],true);
 //		makeCellAlive(universe[3][4],true);
