@@ -9,7 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * @author Kedar
+ * @author Kedar, Jagbir, Abhishek
  *
  */
 public class GameOfLifeTest {

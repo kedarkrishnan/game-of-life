@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 
 
 /**
- * @author Kedar
+ * @author Kedar, Jagbir, Abhishek
  * The universe on which the cells are placed which go live or dead as per the game rules
  */
 public class Board {

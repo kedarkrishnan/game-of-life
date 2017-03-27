@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.util.Random;
 
 /**
- * @author Kedar
+ * @author Kedar, Jagbir, Abhishek
  * Handle the state of the cells in the universe as per the game rules
  */
 
@@ -40,42 +40,12 @@ public class CellHandler {
 	 * Generate random live cells
 	 */
 	protected void createRandomLife(){
-		
-//		makeCellAlive(universe[0][0],true);
-//		makeCellAlive(universe[rows-1][0],true);
-//		makeCellAlive(universe[rows-2][0],true);
-//		makeCellAlive(universe[1][0],true);
-//		makeCellAlive(universe[2][0],true);
-//		
-//		makeCellAlive(universe[0][cols-1],true);
-//		makeCellAlive(universe[1][cols-1],true);
-//		makeCellAlive(universe[2][cols-1],true);
-		
-//		makeCellAlive(universe[3][16],true);
-//		makeCellAlive(universe[4][16],true);
-//		makeCellAlive(universe[5][16],true);	
-//		
-//		makeCellAlive(universe[10][10],true);
-//		makeCellAlive(universe[10][11],true);
-//		makeCellAlive(universe[11][10],true);
-//		
-//		makeCellAlive(universe[12][13],true);
-//		makeCellAlive(universe[13][13],true);
-//		makeCellAlive(universe[13][12],true);
-		
 		Random random = new Random();
 		int count = 0;
 		while (count<initalLives) {
 			makeCellAlive(universe[random.nextInt(rows)][random.nextInt(cols)],true);
 			count++;
 		}
-//
-//		makeCellAlive(universe[3][3],true);
-//		makeCellAlive(universe[3][4],true);
-//		makeCellAlive(universe[3][5],true);
-//		makeCellAlive(universe[2][5],true);
-//		makeCellAlive(universe[1][4],true);
-		
 	}
 	
 	/**
@@ -101,7 +71,6 @@ public class CellHandler {
 	 * @param cell
 	 */
 	private void makeCellDie(Cell cell){
-		//cell.getCellLabel().setOpaque(false);
 		cell.setWasAlive(cell.isAlive());
 		cell.setAlive(false);
 		cell.getCellLabel().setBackground(Color.GRAY);
@@ -162,28 +131,6 @@ public class CellHandler {
 		lifeCount = universe[row][leftCol].isWasAlive() ? ++lifeCount : lifeCount;
 		lifeCount = universe[row][rightCol].isWasAlive() ? ++lifeCount : lifeCount;
 		
-//		//top cells
-//		if(row-1 >= 0){			
-//			lifeCount = col-1 >= 0 ? (universe[row-1][col-1].isWasAlive() ? ++lifeCount : getWrapColLives(row,cols-1,lifeCount)) : lifeCount;
-//			lifeCount = universe[row-1][col].isWasAlive() ? ++lifeCount : lifeCount;
-//			lifeCount = col+1 < cols ? (universe[row-1][col+1].isWasAlive() ? ++lifeCount : getWrapColLives(row,0,lifeCount)):lifeCount;
-//		}else{
-//			//lifeCount = col-1 >= 0 ? (universe[row-1][col-1].isWasAlive() ? ++lifeCount : lifeCount) : lifeCount;
-//			lifeCount = universe[rows-1][col].isWasAlive() ? ++lifeCount : lifeCount;
-//			//lifeCount = col+1 < cols ? (universe[row-1][col+1].isWasAlive() ? ++lifeCount : lifeCount):lifeCount;
-//		}
-//		//bottom cells
-//		if(row+1 < rows){
-//			
-//			lifeCount = col-1 >= 0 ? (universe[row+1][col-1].isWasAlive() ? ++lifeCount : lifeCount) : lifeCount;
-//			lifeCount = universe[row+1][col].isWasAlive() ? ++lifeCount : lifeCount;
-//			lifeCount = col+1 < cols ? (universe[row+1][col+1].isWasAlive() ? ++lifeCount : lifeCount) : lifeCount;
-//		}else{
-//			lifeCount = universe[0][col].isWasAlive() ? ++lifeCount : lifeCount;
-//		}
-//		//middle cells
-//		lifeCount = col-1 >= 0 ? (universe[row][col-1].isWasAlive() ? ++lifeCount : lifeCount) : lifeCount;
-//		lifeCount = col+1 < cols ? (universe[row][col+1].isWasAlive() ? ++lifeCount : lifeCount) : lifeCount;
 		return lifeCount;
 	}
 	

@@ -3,7 +3,7 @@ package com.unitec.java;
 import javax.swing.JLabel;
 
 /**
- * @author Kedar
+ * @author Kedar, Jagbir, Abhishek
  * The cell maintaining the state of current and new generation
  * and reference to JLabel for rendering the state on screen 
  */

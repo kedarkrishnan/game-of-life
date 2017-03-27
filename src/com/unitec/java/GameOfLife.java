@@ -9,7 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 /**
- * @author Kedar
+ * @author Kedar, Jagbir, Abhishek
  * Main entry point for the Game
  */
 public class GameOfLife extends JFrame{
